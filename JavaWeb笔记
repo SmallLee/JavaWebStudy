@@ -57,6 +57,9 @@ url-pattern必须以/开头，代表web应用的跟路径，否则会报错
 	
 14.HttpServletResponse的getWriter方法可以获得一个PrintWriter对象，调用
 他的write方法，可以把内容写到客户端浏览器
+
+15.类的serialVersionUID作用，参看下面的链接
+http://blog.csdn.net/dancen/article/details/7236575
 	
 	
 

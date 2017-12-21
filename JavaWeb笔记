@@ -1,65 +1,67 @@
-1.WEB-INFÄ¿Â¼ÏÂµÄclassesºÍlibÄ¿Â¼¶¼¿ÉÒÔ´æ·ÅJavaÀà£¬Èç¹ûÁ½¸öÄ¿Â¼ÏÂÓĞÍ¬ÃûµÄJavaÀà£¬Ôòclasses
-Ä¿Â¼ÖĞµÄÆğ×÷ÓÃ¡£
-2.ÎªÊ²Ã´ÔÚä¯ÀÀÆ÷ÖĞÊäÈëlocalhost:8080/ÏîÄ¿Ãû³ÆÊ±Ä¬ÈÏ»á·ÃÎÊWebContentÄ¿Â¼ÏÂµÄindex.jsp£¬ÄÇÊÇ
-ÒòÎªÔÚTomcatµÄconfÄ¿Â¼ÏÂµÄweb.xmlÎÄ¼şÖĞÄ¬ÈÏÖ¸¶¨ÁË¡£
+1.WEB-INFç›®å½•ä¸‹çš„classeså’Œlibç›®å½•éƒ½å¯ä»¥å­˜æ”¾Javaç±»ï¼Œå¦‚æœä¸¤ä¸ªç›®å½•ä¸‹æœ‰åŒåçš„Javaç±»ï¼Œåˆ™classes
+ç›®å½•ä¸­çš„èµ·ä½œç”¨ã€‚
+2.ä¸ºä»€ä¹ˆåœ¨æµè§ˆå™¨ä¸­è¾“å…¥localhost:8080/é¡¹ç›®åç§°æ—¶é»˜è®¤ä¼šè®¿é—®WebContentç›®å½•ä¸‹çš„index.jspï¼Œé‚£æ˜¯
+å› ä¸ºåœ¨Tomcatçš„confç›®å½•ä¸‹çš„web.xmlæ–‡ä»¶ä¸­é»˜è®¤æŒ‡å®šäº†ã€‚
 <welcome-file-list>
         <welcome-file>index.html</welcome-file>
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
     
-    Èç¹ûÏëÖ¸¶¨ÎÒÃÇ×Ô¼ºÄ¬ÈÏµÄÊ×Ò³£¬¿ÉÒÔÔÚWEB-INFÏÂµÄweb.xmlÖĞ½øĞĞÅäÖÃ
-  web.xmlÎÄ¼şÖĞµÄdisplay-nameÅäÖÃµÄÊÇwebÏîÄ¿µÄÃû³Æ
+    å¦‚æœæƒ³æŒ‡å®šæˆ‘ä»¬è‡ªå·±é»˜è®¤çš„é¦–é¡µï¼Œå¯ä»¥åœ¨WEB-INFä¸‹çš„web.xmlä¸­è¿›è¡Œé…ç½®
+  web.xmlæ–‡ä»¶ä¸­çš„display-nameé…ç½®çš„æ˜¯webé¡¹ç›®çš„åç§°
   
   <display-name>JavaWebStudy</display-name>
-3.ĞÂ½¨JavaWebÏîÄ¿Ã»ÓĞweb.xmlÎÄ¼ş£¬½â¾ö°ì·¨ÊÇÓÒ¼üÏîÄ¿£¬Ñ¡ÔñJava EE Tools->Generate Deployment Descriptor Stub
+3.æ–°å»ºJavaWebé¡¹ç›®æ²¡æœ‰web.xmlæ–‡ä»¶ï¼Œè§£å†³åŠæ³•æ˜¯å³é”®é¡¹ç›®ï¼Œé€‰æ‹©Java EE Tools->Generate Deployment Descriptor Stub
 
-4.eclipse²¿ÊğµÄwebÏîÄ¿²¢²»ÔÚtomcat°²×°Ä¿Â¼ÖĞ£¬Ä¬ÈÏÊÇÔÚ
+4.eclipseéƒ¨ç½²çš„webé¡¹ç›®å¹¶ä¸åœ¨tomcatå®‰è£…ç›®å½•ä¸­ï¼Œé»˜è®¤æ˜¯åœ¨
 D:\EclipseJavaWorkSpace\.metadata\.plugins\org.eclipse.wst.server.core\tmp2\wtpwebapps
 
-5.WEB-INFÄ¿Â¼²¢²»ÊôÓÚwebÓ¦ÓÃ³ÌĞò¿ÉÒÔ·ÃÎÊµÄÉÏÏÂÎÄÂ·¾¶Ö®Ò»£¬¶Ô¿Í»§¶ËÀ´Ëµ£¬Õâ¸öÄ¿Â¼ÊÇ²»¿É¼ûµÄ
-£¬µ«¸ÃÄ¿Â¼ÏÂµÄÄÚÈİ¶ÔServletÀ´ËµÊÇ¿É¼ûµÄ
+5.WEB-INFç›®å½•å¹¶ä¸å±äºwebåº”ç”¨ç¨‹åºå¯ä»¥è®¿é—®çš„ä¸Šä¸‹æ–‡è·¯å¾„ä¹‹ä¸€ï¼Œå¯¹å®¢æˆ·ç«¯æ¥è¯´ï¼Œè¿™ä¸ªç›®å½•æ˜¯ä¸å¯è§çš„
+ï¼Œä½†è¯¥ç›®å½•ä¸‹çš„å†…å®¹å¯¹Servletæ¥è¯´æ˜¯å¯è§çš„
 
-6.ServletÔÚweb.xmlÖĞĞèÒª½øĞĞ×¢²áºÍÓ³Éä£¬servlet½ÚµãÓÃÓÚ×¢²á£¬servlet-mapping
-½ÚµãÓÃÓÚÓ³Éä£¬servlet-mappingÖĞµÄurl-pattern´ú±íµÄÒâË¼ÊÇServletµÄ¶ÔÍâ·ÃÎÊÂ·¾¶£¨ÔÚä¯ÀÀÆ÷»òÕß±íµ¥·ÃÎÊ£©
-url-pattern±ØĞëÒÔ/¿ªÍ·£¬´ú±íwebÓ¦ÓÃµÄ¸úÂ·¾¶£¬·ñÔò»á±¨´í
+6.Servletåœ¨web.xmlä¸­éœ€è¦è¿›è¡Œæ³¨å†Œå’Œæ˜ å°„ï¼ŒservletèŠ‚ç‚¹ç”¨äºæ³¨å†Œï¼Œservlet-mapping
+èŠ‚ç‚¹ç”¨äºæ˜ å°„ï¼Œservlet-mappingä¸­çš„url-patternä»£è¡¨çš„æ„æ€æ˜¯Servletçš„å¯¹å¤–è®¿é—®è·¯å¾„ï¼ˆåœ¨æµè§ˆå™¨æˆ–è€…è¡¨å•è®¿é—®ï¼‰
+url-patternå¿…é¡»ä»¥/å¼€å¤´ï¼Œä»£è¡¨webåº”ç”¨çš„è·Ÿè·¯å¾„ï¼Œå¦åˆ™ä¼šæŠ¥é”™
 
-7.ServletµÄurl-pattern¿ÉÒÔÖ¸¶¨Í¨Åä·û£¬Ö»ÄÜÓÉÁ½ÖÖĞÎÊ½
-	I.*.ºó×ºÃû
-	II.ÒÔ/¿ªÍ·£¬ÒÔ/*½áÎ²£¬/action/*
+7.Servletçš„url-patternå¯ä»¥æŒ‡å®šé€šé…ç¬¦ï¼Œåªèƒ½ç”±ä¸¤ç§å½¢å¼
+	I.*.åç¼€å
+	II.ä»¥/å¼€å¤´ï¼Œä»¥/*ç»“å°¾ï¼Œ/action/*
 
-8.getRealPath:»ñµÃÄ³Ò»¸öÎÄ¼şÔÚ·şÎñÆ÷ÉÏµÄ¾ø¶ÔÂ·¾¶
+8.getRealPath:è·å¾—æŸä¸€ä¸ªæ–‡ä»¶åœ¨æœåŠ¡å™¨ä¸Šçš„ç»å¯¹è·¯å¾„
 
-9.ServletConfigµÄgetInitParameterÓÃÓÚ»ñÈ¡ÔÙweb.xmlÖĞinit-paramÅäÖÃµÄ²ÎÊı
-Õâ¸öinit-param±ØĞë·ÅÔÚservlet½ÚµãÖĞ£¬²¢ÇÒÊÇservlet-classµÄºóÃæ
+9.ServletConfigçš„getInitParameterç”¨äºè·å–å†web.xmlä¸­init-paramé…ç½®çš„å‚æ•°
+è¿™ä¸ªinit-paramå¿…é¡»æ”¾åœ¨servletèŠ‚ç‚¹ä¸­ï¼Œå¹¶ä¸”æ˜¯servlet-classçš„åé¢
 
-10.load-on-startup:Ö¸¶¨ServletÊµÀı´´½¨µÄÊ±»ú£¬¸ºÊı´ú±íµÚÒ»´ÎÇëÇó´´½¨£¬0ºÍÕıÊı´ú±íwebÓ¦ÓÃ±»ServletÈİÆ÷¼ÓÔØµÄ
-Ê±ºò´´½¨£¬ÊıÖµÔ½Ğ¡£¬ÓÅÏÈ¼¶Ô½¸ß
+10.load-on-startup:æŒ‡å®šServletå®ä¾‹åˆ›å»ºçš„æ—¶æœºï¼Œè´Ÿæ•°ä»£è¡¨ç¬¬ä¸€æ¬¡è¯·æ±‚åˆ›å»ºï¼Œ0å’Œæ­£æ•°ä»£è¡¨webåº”ç”¨è¢«Servletå®¹å™¨åŠ è½½çš„
+æ—¶å€™åˆ›å»ºï¼Œæ•°å€¼è¶Šå°ï¼Œä¼˜å…ˆçº§è¶Šé«˜
 
-11.ÇëÇóÏûÏ¢½á¹¹
-	ÇëÇóÍ·
-	ÇëÇóĞĞ
-	¿ÕĞĞ
-	ÊµÌåÄÚÈİ
+11.è¯·æ±‚æ¶ˆæ¯ç»“æ„
+	è¯·æ±‚å¤´
+	è¯·æ±‚è¡Œ
+	ç©ºè¡Œ
+	å®ä½“å†…å®¹
 
-12.ÏìÓ¦ÏûÏ¢½á¹¹
-	×´Ì¬ĞĞ
-	ÏûÏ¢Í·
-	¿ÕĞĞ
-	ÊµÌåÄÚÈİ
+12.å“åº”æ¶ˆæ¯ç»“æ„
+	çŠ¶æ€è¡Œ
+	æ¶ˆæ¯å¤´
+	ç©ºè¡Œ
+	å®ä½“å†…å®¹
 	
-13.»ñÈ¡ÇëÇóÄÚÈİ
-	getMethod£º»ñÈ¡ÇëÇó·½·¨
-	getRequestURI£º»ñÈ¡ÇëÇóĞĞÖĞ×ÊÔ´Ãû³Æ/JavaWebStudy/login
-	getQueryString£º»ñÈ¡ÇëÇóĞĞÖĞ²ÎÊı²¿·Ö£¬¶ÔÓÚpostÇëÇó£¬·µ»Ønull,¶ÔÓÚgetÇëÇó£¬·µ»ØÈçÏÂ
+13.è·å–è¯·æ±‚å†…å®¹
+	getMethodï¼šè·å–è¯·æ±‚æ–¹æ³•
+	getRequestURIï¼šè·å–è¯·æ±‚è¡Œä¸­èµ„æºåç§°/JavaWebStudy/login
+	getQueryStringï¼šè·å–è¯·æ±‚è¡Œä¸­å‚æ•°éƒ¨åˆ†ï¼Œå¯¹äºpostè¯·æ±‚ï¼Œè¿”å›null,å¯¹äºgetè¯·æ±‚ï¼Œè¿”å›å¦‚ä¸‹
 	username=root&password=1234
-	getServletPath£ºServletµÄÃû³Æ»òÕßservletµÄ·ÃÎÊÂ·¾¶   /login
+	getServletPathï¼šServletçš„åç§°æˆ–è€…servletçš„è®¿é—®è·¯å¾„   /login
 	
-14.HttpServletResponseµÄgetWriter·½·¨¿ÉÒÔ»ñµÃÒ»¸öPrintWriter¶ÔÏó£¬µ÷ÓÃ
-ËûµÄwrite·½·¨£¬¿ÉÒÔ°ÑÄÚÈİĞ´µ½¿Í»§¶Ëä¯ÀÀÆ÷
+14.HttpServletResponseçš„getWriteræ–¹æ³•å¯ä»¥è·å¾—ä¸€ä¸ªPrintWriterå¯¹è±¡ï¼Œè°ƒç”¨
+ä»–çš„writeæ–¹æ³•ï¼Œå¯ä»¥æŠŠå†…å®¹å†™åˆ°å®¢æˆ·ç«¯æµè§ˆå™¨
 
-15.ÀàµÄserialVersionUID×÷ÓÃ£¬²Î¿´ÏÂÃæµÄÁ´½Ó
+15.ç±»çš„serialVersionUIDä½œç”¨ï¼Œå‚çœ‹ä¸‹é¢çš„é“¾æ¥
 http://blog.csdn.net/dancen/article/details/7236575
+
+16.HttpServletçš„æºç 
 	
 	
 

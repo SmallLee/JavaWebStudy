@@ -1,0 +1,65 @@
+1.WEB-INF目录下的classes和lib目录都可以存放Java类，如果两个目录下有同名的Java类，则classes
+目录中的起作用。
+2.为什么在浏览器中输入localhost:8080/项目名称时默认会访问WebContent目录下的index.jsp，那是
+因为在Tomcat的conf目录下的web.xml文件中默认指定了。
+<welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    如果想指定我们自己默认的首页，可以在WEB-INF下的web.xml中进行配置
+  web.xml文件中的display-name配置的是web项目的名称
+  
+  <display-name>JavaWebStudy</display-name>
+3.新建JavaWeb项目没有web.xml文件，解决办法是右键项目，选择Java EE Tools->Generate Deployment Descriptor Stub
+
+4.eclipse部署的web项目并不在tomcat安装目录中，默认是在
+D:\EclipseJavaWorkSpace\.metadata\.plugins\org.eclipse.wst.server.core\tmp2\wtpwebapps
+
+5.WEB-INF目录并不属于web应用程序可以访问的上下文路径之一，对客户端来说，这个目录是不可见的
+，但该目录下的内容对Servlet来说是可见的
+
+6.Servlet在web.xml中需要进行注册和映射，servlet节点用于注册，servlet-mapping
+节点用于映射，servlet-mapping中的url-pattern代表的意思是Servlet的对外访问路径（在浏览器或者表单访问）
+url-pattern必须以/开头，代表web应用的跟路径，否则会报错
+
+7.Servlet的url-pattern可以指定通配符，只能由两种形式
+	I.*.后缀名
+	II.以/开头，以/*结尾，/action/*
+
+8.getRealPath:获得某一个文件在服务器上的绝对路径
+
+9.ServletConfig的getInitParameter用于获取再web.xml中init-param配置的参数
+这个init-param必须放在servlet节点中，并且是servlet-class的后面
+
+10.load-on-startup:指定Servlet实例创建的时机，负数代表第一次请求创建，0和正数代表web应用被Servlet容器加载的
+时候创建，数值越小，优先级越高
+
+11.请求消息结构
+	请求头
+	请求行
+	空行
+	实体内容
+
+12.响应消息结构
+	状态行
+	消息头
+	空行
+	实体内容
+	
+13.获取请求内容
+	getMethod：获取请求方法
+	getRequestURI：获取请求行中资源名称/JavaWebStudy/login
+	getQueryString：获取请求行中参数部分，对于post请求，返回null,对于get请求，返回如下
+	username=root&password=1234
+	getServletPath：Servlet的名称或者servlet的访问路径   /login
+	
+14.HttpServletResponse的getWriter方法可以获得一个PrintWriter对象，调用
+他的write方法，可以把内容写到客户端浏览器
+	
+	
+
+
+
+

@@ -8,11 +8,19 @@
   	<param-name>password</param-name>
   	<param-value>123456</param-value>
   </context-param>
-  
+  <!--说明一组JSP源文件的字符集编码 
+    -->
+  <jsp-config>
+  	<jsp-property-group>
+  		<url-pattern>/jsp/*</url-pattern>
+  		<page-encoding>utf-8</page-encoding>
+  	</jsp-property-group>
+  </jsp-config>
   <!--注册  -->
   <servlet>
   	<servlet-name>helloServlet</servlet-name>
-  	<servlet-class>com.study.javaweb.HelloServlet</servlet-class>
+  	 <jsp-file>/jsp/simple.jsp</jsp-file>
+  	<!--  <servlet-class>com.study.javaweb.HelloServlet</servlet-class>-->
   	 <init-param>
   	<param-name>url</param-name>
   	<param-value>jdbc://mysql://localhost:3306/hibernate</param-value>
@@ -45,7 +53,7 @@
  </servlet>
  <servlet-mapping>
  	<servlet-name>loginServlet</servlet-name>
- 	<url-pattern>/login</url-pattern>
+ 	<url-pattern>/登录</url-pattern>
  </servlet-mapping>
  <servlet>
  	<servlet-name>loginServlet2</servlet-name>

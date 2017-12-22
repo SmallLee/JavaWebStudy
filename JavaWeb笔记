@@ -62,9 +62,83 @@ url-pattern必须以/开头，代表web应用的跟路径，否则会报错
 http://blog.csdn.net/dancen/article/details/7236575
 
 16.HttpServlet的源码
+
+17.JSP编译后的java文件存放在Tomcat目录下的work\Catalina\localhost\JavaWebStudy\org\apache\jsp目录下
+	
+18。注册与配置jsp页面的访问路径
+	jsp页面也可以向Servlet一样在web.xml文件中配置，然后在外部通过url-pattern访问
+	I.在web.xml的servlet节点中使用jsp-file指定jsp文件的路径，注意：此时就不能够在配置
+	servlet-class属性了，因为jsp-file属性已经指定了指定的Servlet
+	II.在浏览器中输入http://localhost:8888/url-pattern就可以访问jsp页面了
+19.jsp文件可以放在WEB-INF目录及其子目录之外的任何目录
+
+20.jsp声明，jsp的声明需要放在<%!%>,这里面的代码将被放在_jspService方法之外，
+可以用于定义静态代码块，成员变量等，
+
+21.jsp隐式对象的作用范围仅限于_jspService方法之内，所以在jsp声明之内不能使用这些隐式对象
+
+22.jsp隐式对象
+	request:
+	response:
+	out: JspWrite实例
+	page:
+	pageContext:
+	exception:只有当前jsp页面的isErrorPage属性为true时，才能访问到这个对象
+	application:
+	config:
+	session:
+	
+23.jsp注释和html注释的区别在于jsp注释在页面的源码中看不到
+
+24.pageEncoding和charset的区别：pageEncoding是jsp页面本身的编码，charset是服务端发送给客户端时的内容编码
+
+25.findAttribute和getAttribute方法区别：
+	findAttribute：在整个范围内查找属性
+	getAttribute:在当前范围内查找属性
+	
+26.application和request对象中都有getRequestDispatcher方法实现转发，区别是
+application中只能使用绝对路径，也就是路径必须以/开头
+
+<% application.getRequestDispatcher("/jsp/simple.jsp").forward(request, response);%>
+	<% //request.getRequestDispatcher("simple.jsp").forward(request, response);%>
+	
+27.PrintWrite向页面写中文乱码,解决办法，在调用getWriter方法之前调用下面的两个方法之一
+设置编码格式
+
+		resp.setContentType("text/html;charset=utf-8");
+		或者
+		//设置发送给客户端内容的编码格式
+		resp.setCharacterEncoding("utf-8");
+		PrintWriter writer = resp.getWriter();
+		writer.write("你好");
+
+28.静态引入
+	通过JSP指令
+	<%@inclue file="xxx.jsp"%>引入
+	引入文件和被引入文件是在翻译成Servlet的过程中合并的，而不是先合并源文件然后对结果进行翻译
+	file属性的设置必须使用相对路径
+	
+静态引入和动态引入
+	1、静态导入是将被导入页面的代码完全融入，两个页面融合成一个整体Servlet；而动态导入则在Servlet中使用include方法来引入被导入页面的内容。
+2、静态导入时被导入页面的编译指令会起作用；而动态导入时被导入页面的编译指令则失去作用，只是插入被导入页面的body内容。
+3、动态导入还可以增加额外的参数。即如下代码方式：
+	
+29.jsp标签
+	jsp:include
+		
+	jsp:forward
+	jsp:param
+30.如何设置jsp文件的编码方式
+	I.contentType
+	II.pageEncoding
+	III.在web.xml文件中配置
+  <!--说明一组JSP源文件的字符集编码 
+    -->
+  <jsp-config>
+  	<jsp-property-group>
+  		<url-pattern>/jsp/*</url-pattern>
+  		<page-encoding>utf-8</page-encoding>
+  	</jsp-property-group>
+  </jsp-config>
 	
 	
-
-
-
-

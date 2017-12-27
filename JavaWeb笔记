@@ -159,6 +159,20 @@ application中只能使用绝对路径，也就是路径必须以/开头
                 a:超链接
                 b:表单中的action
                 c:请求重定向
-24.
+24.Cookie原理：
+	WEB服务器通过在HTTP响应消息中增加Set-Cookie响应头字段将Cookie信息发送给浏览器，
+	浏览器则通过在HTTP请求消息中增加Cookie请求头字段将Cookie回传给WEB服务器。
+	
+	通过调用response对象的addCookie方法，在响应消息头中增加Set-Cookie响应头，
+	第一次请求时，浏览器没有Cookie,此时服务端响应中会带有Set-Cookie响应头，如果add了多个Cookie，则
+	响应头中会有多个Set-Cookie响应头，再次请求时，浏览器会在请求头中携带Cookie请求头字段，Cookie的值
+	是服务端返回的Set-Cookie的值，如果有多个Set-Cookie,则最后添加的有效
+	
+	
+	默认情况下cookie是一个会话级别的，存储在浏览器的内存中，浏览器关闭后，Cookie失效
+	若想cookie存储在磁盘上，需要调用setMaxAge方法，传入以秒为单位的时间，默认是-1，传入0代表删除cookie
+	
+	Cookie的默认作用范围：可以作用当前目录和当前目录的子目录，但不能作用于当前目录的上级目录
+	//可以通过setPath设置Cookie的作用范围，其中/代表站点的根目录，一般是
  	
 	

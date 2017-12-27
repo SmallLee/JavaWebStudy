@@ -140,5 +140,25 @@ application中只能使用绝对路径，也就是路径必须以/开头
   		<page-encoding>utf-8</page-encoding>
   	</jsp-property-group>
   </jsp-config>
-	
+  
+  21.当重写了对象的toString和hashCode方式时，会发现对象的hashCode方法少调用了两次，
+  因为Object中的toString方法默认调用了hashCode方法
+  public String toString() {
+        return getClass().getName() + "@" + Integer.toHexString(hashCode());
+    }
+ 22.MVC层中Dao层的设计的设计
+ 	Dao:定义需要的方法
+ 	BaseDao:方法的具体实现
+ 	DaoImpl:继承BaseDao实现了Dao接口，用于外界调用
+ 	
+23.JavaWeb中的/代表什么
+        代表当前Web应用的根路径（/需要交给servlet处理）,也就是localhost:8080/contextPath/
+                a:请求转发
+                b：web.xml中配置的
+        代表当前站点的跟路径(浏览器处理),localhost:8080
+                a:超链接
+                b:表单中的action
+                c:请求重定向
+24.
+ 	
 	

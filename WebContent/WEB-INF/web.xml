@@ -53,7 +53,7 @@
  </servlet>
  <servlet-mapping>
  	<servlet-name>loginServlet</servlet-name>
- 	<url-pattern>/登录</url-pattern>
+ 	<url-pattern>*.do</url-pattern>
  </servlet-mapping>
  <servlet>
  	<servlet-name>loginServlet2</servlet-name>

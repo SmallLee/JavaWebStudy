@@ -2,6 +2,7 @@ package com.study.javaweb;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.lang.reflect.Method;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -35,9 +36,22 @@ public class LoginServlet extends HttpServlet{
 //		writer.write("你好");
 		
 		//设置请求体的字符编码为utf-8
-		req.setCharacterEncoding("utf-8");
-		String username = req.getParameter("username");
-		String password = req.getParameter("password");
-		System.out.println(username + "--" + password);
+//		req.setCharacterEncoding("utf-8");
+//		String username = req.getParameter("username");
+//		String password = req.getParameter("password");
+//		System.out.println(username + "--" + password);
+		String path = req.getServletPath();// /add.do
+		String methodName = path.substring(1,path.indexOf("."));
+		try {
+			Method method = getClass().getDeclaredMethod(methodName, HttpServletRequest.class,HttpServletResponse.class);
+			method.invoke(this, req,resp);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		
+	}
+	
+	private void delete(HttpServletRequest request,HttpServletResponse response) {
+		System.out.println("====delete");
 	}
 }

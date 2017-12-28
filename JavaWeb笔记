@@ -174,5 +174,10 @@ application中只能使用绝对路径，也就是路径必须以/开头
 	
 	Cookie的默认作用范围：可以作用当前目录和当前目录的子目录，但不能作用于当前目录的上级目录
 	//可以通过setPath设置Cookie的作用范围，其中/代表站点的根目录，一般是
+	
+25.Session
+	第一次请求时，服务端会在响应消息中携带Set-Cookie:JSESSIONID=9163A33022CD10799398E6CAAA7C868E
+	第二次请求时，请求头中会携带Cookie:JSESSIONID=9163A33022CD10799398E6CAAA7C868E请求头
+	，名称是JSESSIONID,值是服务端返回的session的值。
  	
 	

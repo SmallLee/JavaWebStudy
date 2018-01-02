@@ -179,5 +179,24 @@ application中只能使用绝对路径，也就是路径必须以/开头
 	第一次请求时，服务端会在响应消息中携带Set-Cookie:JSESSIONID=9163A33022CD10799398E6CAAA7C868E
 	第二次请求时，请求头中会携带Cookie:JSESSIONID=9163A33022CD10799398E6CAAA7C868E请求头
 	，名称是JSESSIONID,值是服务端返回的session的值。
+	
+26.Session生命周期
+	对于jsp,是否浏览器访问服务端的每一个jsp页面，都会立即创建一个HttpSession对象，
+	答案：不一定，若当前的jsp页面时浏览器访问的第一个资源，并且jsp的session="false"
+	,则服务端不会创建HttpSession对象
+	若当前jsp页面不是服务端访问的第一个页面，并且其他页面已经创建了一个HttpSession对象
+	则服务端也不会创建
+	
+	对于Servlet:若Servlet是浏览器访问的第一个资源，则只有调用了request.getSession时才创建
+	
+27.request.getSession等同于request.getSession(true)
+
+28.什么时候销毁Session
+        调用session的invalidate
+        服务器卸载了当前web应用
+        超过了session的过期时间,session.setMaxInactiveInterval可以设置session的有效时间
+        在web.xml中也可以设置session过期时间，单位分钟
+
+	
  	
 	
